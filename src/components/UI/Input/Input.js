@@ -1,11 +1,17 @@
-import React, {useRef, useEffect} from 'react'
+import React, {useRef, useEffect, useImperativeHandle} from 'react'
 import classes from './Input.module.css'
+
+
 function Input(props) {
 const inputRef = useRef();
-useEffect(()=>{
+
+const activate = () => {
   inputRef.current.focus();
+}
+// useEffect(()=>{
+//   inputRef.current.focus();
 // const inputRef = useRef();
-}, []);
+// }, []);
 
   return ( <div
     className={`${classes.control} ${
